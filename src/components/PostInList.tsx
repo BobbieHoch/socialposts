@@ -1,5 +1,6 @@
 import React from 'react';
-import { Post } from './SocialPosts';
+import {Post} from '../interface/interface';
+
 
 interface Props {
   post: Post;

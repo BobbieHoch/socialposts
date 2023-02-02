@@ -1,28 +1,51 @@
 import React, { useState } from 'react';
-import { Post } from './SocialPosts';
+// import {Post} from '../interface/interface';
+
 
 interface Props {
-  onSubmitForm: (post: Post) => void;
+  onSubmitForm: (post: { title: string; thought: string }) => void;
   onClose: () => void;
 }
 
 const PostForm: React.FC<Props> = ({ onSubmitForm, onClose }) => {
-    const [title, setTitle] = useState('');
-    const [thought, setThought] = useState('');
+  const [title, setTitle] = useState('');
+  const [thought, setThought] = useState('');
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        onSubmitForm({ title, thought });
-    };
-
-    return (
-        <form onSubmit={handleSubmit}>
-            <h3>New Post</h3>
-            <input
-                type="text"
-                placeholder="Title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-              <input />
-        </form>)
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    onSubmitForm({ title, thought });
+    setTitle("");
+    setThought("");
+  };
+  return (
+    <div className="modal">
+      <form onSubmit={handleSubmit}>
+        <h2>New Thought</h2>
+        <label htmlFor="title">
+          Title:
+          <input
+            type="text"
+            id="title"
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
+            required
+          />
+        </label>
+        <label htmlFor="thought">
+          Thought:
+          <textarea
+            id="thought"
+            value={thought}
+            onChange={(event) => setThought(event.target.value)}
+            required
+          />
+        </label>
+        <button type="submit">Submit</button>
+        <button type="button" onClick={onClose}>
+          Close
+        </button>
+      </form>
+    </div>
+  )
 }
+export default PostForm

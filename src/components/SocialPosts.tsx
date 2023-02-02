@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PostInList from './PostInList';
 import PostForm from './PostForm';
+import { Post } from '../interface';
 
 const SocialPosts: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
