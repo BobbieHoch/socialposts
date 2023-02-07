@@ -9,9 +9,9 @@ interface Props {
 
 const PostInList: React.FC<Props> = ({ post, onDelete }) => (
   <div>
-    <h3>{post.title}</h3>
-    <p>{post.thought}</p>
-    <button onClick={onDelete}>Delete</button>
+    <h3 className = 'TitleInList'>{post.title}</h3>
+    <p className = 'ThoughtInList'>{post.thought}</p>
+    <button onClick={onDelete} className = 'DelBtn'>Delete</button>
   </div>
 );
 

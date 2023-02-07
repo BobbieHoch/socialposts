@@ -1,6 +1,12 @@
 .App {
   text-align: center;
+  background-color: #f3f1f7;
+  font-family: 'Caveat', cursive;
 
+
+}
+.newThougt{
+  color: #03a9f4
 }
 button {
   background: #0084ff;
@@ -13,6 +19,7 @@ button {
   outline: none;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   margin-right: 1rem;
+  margin-top: 10px;
 }
 input, textarea {
   width: 100%;
@@ -24,7 +31,8 @@ input, textarea {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 form {
-  background: white;
+  width:50%;
+  background: #79c5e8;
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);

@@ -18,7 +18,7 @@ const SocialPosts: React.FC = () => {
 
   return (
     <div>
-      <button onClick={() => setShowForm(true)}>New Thought</button>
+      <button className = "newThought" onClick={() => setShowForm(true)}>Click Here to Post New Thought</button>
       {showForm && (
         <PostForm onSubmitForm={addPost} onClose={() => setShowForm(false)} />
       )}

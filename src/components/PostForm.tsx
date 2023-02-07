@@ -20,7 +20,7 @@ const PostForm: React.FC<Props> = ({ onSubmitForm, onClose }) => {
   return (
     <div className="modal">
       <form onSubmit={handleSubmit}>
-        <h2>New Thought</h2>
+        <h2>Enter Title & Thought Here</h2>
         <label htmlFor="title">
           Title:
           <input
